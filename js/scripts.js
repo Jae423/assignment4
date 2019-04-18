@@ -11,6 +11,15 @@ var map = new mapboxgl.Map({
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
+
+var popup = new mapboxgl.Popup({ offset: 40 })
+  .setText('Hi Web Mapping 2019 Class!');
+
+var marker = new mapboxgl.Marker()
+  .setLngLat([-73.969145,40.669116])
+  .setPopup(popup)
+  .addTo(map);
+
 swcafes.forEach(function(cafedata) {
 
   var type = 'yellow';
