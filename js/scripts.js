@@ -8,28 +8,20 @@ var map = new mapboxgl.Map({
   zoom: 10,
 });
 
-// Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
-
+map.addControl(new MapboxDirections({
+accessToken: mapboxgl.accessToken
+}), 'top-left');
 
 swcafes.forEach(function(cafedata) {
 
-  var type = 'yellow';
-  if (cafedata.SWC_TYPE === 'Small Unenclosed') type = 'orange';
-  if (cafedata.SWC_TYPE === 'Unenclosed') type = 'purple';
-  if (cafedata.SWC_TYPE === 'Enclosed') type = 'green';
-
-
-  var text =
-  if (cafedata.BUSINESS_NAME2 === '') `${cafedata.BUSINESS_NAME} is the new sidewalk cafe`;
-  ${cafedata.BUSINESS_NAME2} "is the new sidewalk cafe, owned by" ${cafedata.BUSINESS_NAME};
+  var type = 'darkgreen';
+  if (cafedata.SWC_TYPE === 'Unenclosed') type = 'lightblue';
 
   new mapboxgl.Marker({
     color: type,
   })
     .setLngLat([cafedata.LONGITUDE, cafedata.LATITUDE])
     .setPopup(new mapboxgl.Popup({ offset: 40 })
-    .setText([text])
-
+    .setText(`${cafedata.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${cafedata.BUSINESS_NAME}`))
     .addTo(map);
 })
