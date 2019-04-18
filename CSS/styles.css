@@ -1,6 +1,6 @@
-#mapCointainer {
-  width: 300px;
+#mapContainer {
   height: 500px;
-  background: lightgray
-  margin-left: auto
+  width: 500px;
+  background: lightgray;
+  margin: 0 auto;
 }
