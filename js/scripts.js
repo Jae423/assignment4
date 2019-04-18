@@ -11,27 +11,18 @@ var map = new mapboxgl.Map({
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-var popup = new mapboxgl.Popup({ offset: 40 })
-  .setText('Hi Web Mapping 2019 Class!');
+swcafes.forEach(function(cafedata) {
 
-var marker = new mapboxgl.Marker()
-  .setLngLat([-73.969145,40.669116])
-  .setPopup(popup)
-  .addTo(map);
-
-studentPizzaShops.forEach(function(studentData) {
-
-  var thisStudentsColor = 'steelblue';
-  if (studentData.nyuprogram === 'wagner') thisStudentsColor = 'orange';
-  if (studentData.nyuprogram === 'cusp') thisStudentsColor = 'purple';
-  if (studentData.nyuprogram === 'adjunct') thisStudentsColor = 'green';
-  if (studentData.nyuprogram === 'global liberal studies') thisStudentsColor = 'yellow';
+  var type = 'yellow';
+  if (swcafes.SWC_TYPE === 'Small Unenclosed') type = 'orange';
+  if (swcafes.SWC_TYPE === 'Unenclosed') type = 'purple';
+  if (swcafes.SWC_TYPE === 'Enclosed') type = 'green';
 
   new mapboxgl.Marker({
-    color: thisStudentsColor,
+    color: type,
   })
-    .setLngLat([studentData.lng, studentData.lat])
+    .setLngLat([swcafes.LONGITUDE, swcafes.LATITUDE])
     .setPopup(new mapboxgl.Popup({ offset: 40 })
-      .setText(`${studentData.name} says their favorite pizza shop is ${studentData.favoritepizzashop}`))
+      .setText(`${swcafes.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${swcafes.BUSINESS_NAME}`))
     .addTo(map);
 })
