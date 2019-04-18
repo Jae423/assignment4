@@ -1,6 +1,6 @@
 #mapContainer {
   height: 600px;
   width: 1250px;
-  background: lightgray;
+  background: 'mapbox://styles/mapbox/dark-v10';
   margin: 0 auto;
 }

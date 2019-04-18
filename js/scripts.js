@@ -19,12 +19,17 @@ swcafes.forEach(function(cafedata) {
   if (cafedata.SWC_TYPE === 'Unenclosed') type = 'purple';
   if (cafedata.SWC_TYPE === 'Enclosed') type = 'green';
 
+
+  var text =
+  if (cafedata.BUSINESS_NAME2 === '') `${cafedata.BUSINESS_NAME} is the new sidewalk cafe`;
+  ${cafedata.BUSINESS_NAME2} "is the new sidewalk cafe, owned by" ${cafedata.BUSINESS_NAME};
+
   new mapboxgl.Marker({
     color: type,
   })
     .setLngLat([cafedata.LONGITUDE, cafedata.LATITUDE])
     .setPopup(new mapboxgl.Popup({ offset: 40 })
-    .setText(`${cafedata.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${cafedata.BUSINESS_NAME}`))
+    .setText([text])
 
     .addTo(map);
 })
