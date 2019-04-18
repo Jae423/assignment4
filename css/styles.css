@@ -1,0 +1,11 @@
+
+#mapContainer {
+  height: 1500px;
+  width: 600px;
+  background: lightgray;
+  margin: 0 auto;
+}
+
+h4{
+  font-family: verdana
+}
