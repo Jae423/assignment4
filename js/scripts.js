@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/light-v9',
   center: [-73.98, 40.70],
-  zoom: 11,
+  zoom: 10,
 });
 
 // Add zoom and rotation controls to the map.
@@ -14,10 +14,18 @@ map.addControl(new mapboxgl.NavigationControl());
 var popup = new mapboxgl.Popup({ offset: 40 })
   .setText('Hi Web Mapping 2019 Class!');
 
-var marker = new mapboxgl.Marker()
-  .setLngLat([-73.969145,40.669116])
-  .setPopup(popup)
-  .addTo(map);
+
+  var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+  var popupOffsets = {
+   'top': [0, 0],
+   'top-left': [0,0],
+   'top-right': [0,0],
+   'bottom': [0, -markerHeight],
+   'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+   'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+   'left': [markerRadius, (markerHeight - markerRadius) * -1],
+   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+   };
 
 swcafes.forEach(function(cafedata) {
 
