@@ -1,5 +1,4 @@
 var swcafes = [
-  [
     {
       "LICENSE_NBR": "1379033-DCA",
       "BUSINESS_NAME": "FULTONGRAND BAR, INC.",
