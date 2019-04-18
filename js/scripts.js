@@ -22,6 +22,6 @@ swcafes.forEach(function(cafedata) {
   })
     .setLngLat([cafedata.LONGITUDE, cafedata.LATITUDE])
     .setPopup(new mapboxgl.Popup({ offset: 40 })
-    .setText(`${cafedata.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${cafedata.BUSINESS_NAME}`))
+    .setText(`${cafedata.BUSINESS_NAME2} is a new sidewalk cafe!`))
     .addTo(map);
 })
