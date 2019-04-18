@@ -12,14 +12,6 @@ var map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 
-var popup = new mapboxgl.Popup({ offset: 40 })
-  .setText('Hi Web Mapping 2019 Class!');
-
-var marker = new mapboxgl.Marker()
-  .setLngLat([-73.969145,40.669116])
-  .setPopup(popup)
-  .addTo(map);
-
 swcafes.forEach(function(cafedata) {
 
   var type = 'yellow';
@@ -32,7 +24,7 @@ swcafes.forEach(function(cafedata) {
   })
     .setLngLat([cafedata.LONGITUDE, cafedata.LATITUDE])
     .setPopup(new mapboxgl.Popup({ offset: 40 })
-    if (cafedata.SWC_TYPE === '') .setText(`${cafedata.BUSINESS_NAME} 'is the new sidewalk cafe`))
-    if (cafedata.SWC_TYPE != '') .setText(`${cafedata.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${cafedata.BUSINESS_NAME}`))
+    .setText(`${cafedata.BUSINESS_NAME2} is the new sidewalk cafe, owned by ${cafedata.BUSINESS_NAME}`))
+
     .addTo(map);
 })
