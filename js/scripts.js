@@ -8,25 +8,6 @@ var map = new mapboxgl.Map({
   zoom: 10,
 });
 
-map.addControl(new MapboxDirections({
-accessToken: mapboxgl.accessToken
-}), 'top-left');
-
-swcafes.forEach(function(cafedata) {
-
-  var type = 'darkgreen';
-  if (cafedata.SWC_TYPE === 'Unenclosed') type = 'lightblue';
-
-  new mapboxgl.Marker({
-    color: type,
-  })
-    .setLngLat([cafedata.LONGITUDE, cafedata.LATITUDE])
-    .setPopup(new mapboxgl.Popup({ offset: 40 })
-    .setText(`${cafedata.BUSINESS_NAME2} is a new sidewalk cafe!`))
-    .addTo(map);
-})
-
-
 // instantiate the map
 var map = new mapboxgl.Map({
   container: 'mapContainer',
