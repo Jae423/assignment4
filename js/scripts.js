@@ -103,7 +103,6 @@ for (var i=1; i<12; i++) {
 var neighborHoodLookup = {
   'gml': [-73.9136779, 40.8587651],
   'jeromeave': [-73.9063548, 40.8589575],
-  'university-heights': [-73.9192639,40.858296]
 }
 
 
