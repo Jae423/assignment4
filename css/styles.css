@@ -25,7 +25,7 @@ html, body {
   top: 25px;
   right: 25px;
   z-index: 10;
-  background-color:#eeefc5;
+  background-color:#92bf50;
   padding: 15px;
   border-radius: 11px;
   box-shadow: 1px 1px 7px #525252;
@@ -38,9 +38,10 @@ h3 {
 }
 
 button {
-  padding: 10px;
-  font-weight: 500;
-  border-radius: 5px;
+  padding: 20px;
+  font-weight: 1000;
+  border-radius: 15px;
+  background-color: lightyellow
 }
 
 .legend-color-box {

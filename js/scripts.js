@@ -6,7 +6,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamVsbGkxMCIsImEiOiJjanVkOXE0b3IwdDM4NDRxcmw3Z
 var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/satellite-streets-v9',
-  center: [-73.9192639,40.858296],
+  center: [-73.9071936,40.8556418],
   zoom: 14,
 });
 
@@ -102,7 +102,7 @@ for (var i=1; i<12; i++) {
 // a little object for looking up neighborhood center points
 var neighborHoodLookup = {
   'gml': [-73.9136779, 40.8587651],
-  'jeromeave': [-73.9063548, 40.8589575],
+  'jeromeave': [-73.9042463, 40.8584254],
 }
 
 
