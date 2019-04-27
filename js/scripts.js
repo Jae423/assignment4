@@ -7,3 +7,22 @@ var map = new mapboxgl.Map({
   center: [-73.9795357,40.773105],
   zoom: 11,
 });
+
+map.addControl(new mapboxgl.NavigationControl());
+
+map.on('load', function() {
+    map.addLayer({
+      id: 'histdist',
+      source: {
+        type: 'vector',
+        url: 'mapbox://your-map-id-here'
+      },
+      'source-layer': 'histdist2',
+    });
+  });
+
+
+  map.addSource('histdist2', {
+    type: 'geojson',
+    data: './data/histdist2',
+  });
