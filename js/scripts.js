@@ -6,8 +6,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamVsbGkxMCIsImEiOiJjanVkOXE0b3IwdDM4NDRxcmw3Z
 var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/light-v9',
-  center: [-73.951,40.728],
-  zoom: 14,
+  center: [-73.9192639,40.858296],
+  zoom: 12,
 });
 
 // Add zoom and rotation controls to the map.
