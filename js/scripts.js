@@ -123,7 +123,7 @@ map.on('style.load', function() {
 
   // let's hack the basemap style a bit
   // you can use map.getStyle() in the console to inspect the basemap layers
-  map.setPaintProperty('water', 'fill-color', '#a4bee8')
+  map.setPaintProperty('water', 'fill-color', '#003366')
 
   // this sets up the geojson as a source in the map, which I can use to add visual layers
   map.addSource('plutouh', {
