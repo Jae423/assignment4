@@ -118,7 +118,7 @@ map.on('style.load', function() {
     var center = neighborHoodLookup[neighborhood];
 
     // fly to the neighborhood's center point
-    map.flyTo({center: center, zoom: 18});
+    map.flyTo({center: center, zoom: 17});
   });
 
   // let's hack the basemap style a bit

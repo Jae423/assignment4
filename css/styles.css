@@ -15,7 +15,7 @@ html, body {
   width: 300px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 10;
   padding: 15px;
@@ -46,6 +46,6 @@ button {
 .legend-color-box {
   height: 15px;
   width: 15px;
-  float: left;
+  float: right;
   margin-right: 10px;
 }
