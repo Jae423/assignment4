@@ -130,14 +130,14 @@ map.on('style.load', function() {
   // this sets up the geojson as a source in the map, which I can use to add visual layers
   map.addSource('histdist3', {
     type: 'geojson',
-    data: './data/histdist3.geojson',
+    data: './data/plutouh.geojson',
   });
 
   // add a custom-styled layer for tax lots
   map.addLayer({
-    id: 'histdist3-fill',
+    id: 'plutouh-fill',
     type: 'fill',
-    source: 'histdist3',
+    source: 'plutouh',
     paint: {
       'fill-opacity': 0.7,
       'fill-color': {
@@ -195,9 +195,9 @@ map.on('style.load', function() {
 
   // add an outline to the tax lots which is only visible after zoom level 14.8
   map.addLayer({
-    id: 'histdist3-line',
+    id: 'plutouh-line',
     type: 'line',
-    source: 'histdist3',
+    source: 'plutouh',
     paint: {
       'line-opacity': 0.7,
       'line-color': 'gray',
@@ -232,7 +232,7 @@ map.on('style.load', function() {
   map.on('mousemove', function (e) {
     // query for the features under the mouse, but only in the lots layer
     var features = map.queryRenderedFeatures(e.point, {
-        layers: ['histdist3-fill'],
+        layers: ['plutouh-fill'],
     });
 
     // get the first feature from the array of returned features.
