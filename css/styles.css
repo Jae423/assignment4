@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:0
+}
 
 #mapContainer {
   height: 100%;
@@ -5,19 +10,6 @@
   background: lightgray;
   margin: 0 auto;
 }
-
-h4{
-  font-weight:200;
-  font-family: verdana;
-
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  margin:0
-}
-
 
 #sidebar {
   width: 300px;
@@ -33,7 +25,7 @@ html, body {
   top: 25px;
   left: 25px;
   z-index: 10;
-  background-color: blue;
+  background-color: #c3c3c3;
   padding: 15px;
   border-radius: 11px;
   box-shadow: 1px 1px 7px #525252;
@@ -56,5 +48,4 @@ button {
   width: 15px;
   float: left;
   margin-right: 10px;
-  color: blue
 }
