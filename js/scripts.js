@@ -10,19 +10,18 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
+
+  map.addSource('histdist3', {
+    type: 'geojson',
+    data: './data/histdist3',
+  });
+
 map.on('load', function() {
     map.addLayer({
       id: 'histdist',
       source: {
         type: 'vector',
-        url: 'mapbox://your-map-id-here'
       },
-      'source-layer': 'histdist2',
+      'source-layer': 'histdist3',
     });
-  });
-
-
-  map.addSource('histdist2', {
-    type: 'geojson',
-    data: './data/histdist2',
   });
