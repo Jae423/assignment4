@@ -19,6 +19,7 @@ html, body {
   bottom: 0;
   z-index: 10;
   padding: 15px;
+  font-family: verdana;
 }
 
 .info-box {
@@ -34,19 +35,26 @@ html, body {
 
 h3 {
   margin: 0 0 15px 0;
-  font-size: 1rem;
+  font-size: .9rem;
+  font-family: verdana;
+}
+
+h4 {
+  margin: 0 0 15px 0;
+  font-size: .80rem;
+  font-family: verdana;
 }
 
 button {
-  padding: 20px;
+  padding: 10px;
   font-weight: 1000;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: lightyellow
 }
 
 .legend-color-box {
   height: 15px;
   width: 15px;
-  float: right;
-  margin-right: 10px;
+  float: left;
+  margin-left: 10px;
 }
