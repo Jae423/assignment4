@@ -7,7 +7,7 @@ var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/light-v9',
   center: [-73.9192639,40.858296],
-  zoom: 12,
+  zoom: 14,
 });
 
 // Add zoom and rotation controls to the map.
@@ -101,10 +101,9 @@ for (var i=1; i<12; i++) {
 
 // a little object for looking up neighborhood center points
 var neighborHoodLookup = {
-  'park-slope': [-73.979702, 40.671199],
-  'morningside-heights': [-73.962750, 40.809099],
-  'fidi': [-74.007468, 40.710800],
-  'greenpoint': [-73.951,40.732169],
+  'gml': [-73.9136779, 40.8587651],
+  'jeromeave': [-73.9063548, 40.8589575],
+  'university-heights': [-73.9192639,40.858296]
 }
 
 
@@ -120,7 +119,7 @@ map.on('style.load', function() {
     var center = neighborHoodLookup[neighborhood];
 
     // fly to the neighborhood's center point
-    map.flyTo({center: center, zoom: 14});
+    map.flyTo({center: center, zoom: 16});
   });
 
   // let's hack the basemap style a bit
