@@ -244,7 +244,9 @@ map.on('style.load', function() {
 
       // use jquery to display the address and land use description to the sidebar
       $('#address').text(lot.properties.address);
-      $('#landuse').text(landuseDescription);
+      $('#landmark').text(lot.properties.landmark);
+      $('#builtfar').text(lot.properties.builtfar);
+
 
       // set this lot's polygon feature as the data for the highlight source
       map.getSource('highlight-feature').setData(lot.geometry);
