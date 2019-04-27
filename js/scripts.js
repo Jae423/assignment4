@@ -128,7 +128,7 @@ map.on('style.load', function() {
   map.setPaintProperty('water', 'fill-color', '#a4bee8')
 
   // this sets up the geojson as a source in the map, which I can use to add visual layers
-  map.addSource('histdist3', {
+  map.addSource('plutouh', {
     type: 'geojson',
     data: './data/plutouh.geojson',
   });
